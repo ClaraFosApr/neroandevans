@@ -1,0 +1,90 @@
+\documentclass[12pt,a4paper]{article}
+
+% Packages
+\usepackage{geometry}
+\usepackage{graphicx}
+\usepackage{array}
+\usepackage{booktabs}
+\usepackage{hyperref}
+\usepackage{circuitikz} % for circuit diagram
+
+% Page setup
+\geometry{margin=1in}
+
+\title{Lab 4 Report: Inductor Behavior in a DC Switching Circuit}
+\author{Your Name}
+\date{\today}
+
+\begin{document}
+
+\maketitle
+
+\section*{Aim}
+The aim of this practical is to examine how an inductor responds when direct current (DC) is suddenly applied and removed. The experiment illustrates the way inductors resist abrupt variations in current.
+
+\section*{GitHub Repository}
+All project-related code and resources are hosted on GitHub. A snapshot of the repository is provided below:
+
+\begin{center}
+    \includegraphics[width=0.8\textwidth]{github_screenshot.png} % Replace with your actual screenshot
+\end{center}
+
+\section*{Background: Inductor Fundamentals}
+An inductor is a passive electronic element, usually a coil of wire, that stores energy in the form of a magnetic field whenever current flows through it.  
+
+The relationship between voltage and current in an inductor is given by:
+\[
+V = L \frac{di}{dt}
+\]
+where:
+\begin{itemize}
+    \item $V$ = voltage across the inductor,
+    \item $L$ = inductance (Henrys),
+    \item $\tfrac{di}{dt}$ = rate of change of current with respect to time.
+\end{itemize}
+
+This means inductors naturally oppose any rapid change in current. When connected to DC, the current does not immediately reach its maximum but instead increases gradually. Similarly, when disconnected, the inductor momentarily continues supplying current as it discharges stored energy.
+
+\section*{Experimental Setup}
+\subsection*{Required Components}
+\begin{itemize}
+    \item 9V Battery
+    \item Pushbutton switch
+    \item 220$\Omega$ Resistor
+    \item Inductor
+    \item LED
+    \item Connecting wires
+\end{itemize}
+
+\subsection*{Steps Followed}
+\begin{enumerate}
+    \item Assemble the circuit in the following sequence:  
+    Battery $\rightarrow$ Pushbutton $\rightarrow$ Resistor (220$\Omega$) $\rightarrow$ Inductor $\rightarrow$ LED $\rightarrow$ Ground.
+    \item Close (press) and open (release) the pushbutton to control the circuit connection.
+    \item Carefully watch how the LED behaves during both switching actions.
+\end{enumerate}
+
+\section*{Observations}
+\begin{center}
+\begin{tabular}{|c|c|c|}
+\hline
+\textbf{Action} & \textbf{LED Response} & \textbf{Explanation} \\
+\hline
+Pushbutton Pressed & LED brightness increases gradually & The inductor resists sudden current rise. \\
+\hline
+Pushbutton Released & LED slowly fades out & Stored magnetic energy in the inductor maintains current. \\
+\hline
+\end{tabular}
+\end{center}
+
+\section*{Simulation (if available)}
+If Proteus software was used for verification, the simulated circuit diagram and output waveforms can be attached here:
+
+\begin{center}
+    \includegraphics[width=0.8\textwidth]{proteus_simulation.png} % Replace with your Proteus image
+\end{center}
+
+\section*{Conclusion}
+The experiment confirmed that inductors play a crucial role in limiting instantaneous changes in current. When the circuit was switched on, the LED did not light up instantly but instead brightened gradually. When the power supply was disconnected, the LED dimmed gradually as the inductor released its stored magnetic energy. This characteristic makes inductors essential in smoothing, filtering, and transient control in electronic circuits.
+
+\end{document}
